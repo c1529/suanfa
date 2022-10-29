@@ -1,4 +1,5 @@
 //静态生成顺序链表
+#include<stdio.h>
 typedef struct {
 	int data[10];   //用静态数组存放数据元素
 	int lengeth;
