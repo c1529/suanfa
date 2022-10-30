@@ -14,8 +14,13 @@ void InitList(SqList& L, int n)
 	L.Lengeth = n;
 }
 //线性表的插入
-void ListInsert(SqList& L, int i, int e)
+bool ListInsert(SqList& L, int i, int e)
+//采用bool型函数,两个if使函数变得健壮性，确定了i的合法性
 {
+	if (i<1 || i>L.Lengeth)
+		return false;
+	if (L.Lengeth == MaxSize)
+		return false;
 	int j;
 	for (j = L.Lengeth; j >= i; j--)
 	{
@@ -35,9 +40,6 @@ int main()
 		printf("%d\n", L.data[j]);
 	return 0;
 }
-
-
-
 
 
 
