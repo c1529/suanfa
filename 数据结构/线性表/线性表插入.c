@@ -28,6 +28,7 @@ bool ListInsert(SqList& L, int i, int e)
 	}
 	L.data[i - 1] = e;
 	L.Lengeth++;
+	return true;
 }
 int main()
 {
