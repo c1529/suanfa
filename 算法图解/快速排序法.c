@@ -28,8 +28,15 @@ nums[j]<k,此时i的方向却一直符合，即此时的nums[j]左边全是
 			nums[j] = temp;
 		}
 	}
+/*
+这里探讨为什么要将最后的nums[i](或者说nums[j])给nums[low]而不是nums[high]
+一、j到i：（交换过）则最终nums[i]是j循环时候小于nums[low]换过来的，符合
+		   (没交换过)则是i=j=low
+二、i到j:i到j的条件是j出现了小于nums[low]的值才开始i的循环，此时nums[j]是小于nums[low]的
+*/
 	nums[low] = nums[j];//用i或者j都行，因为上一段while停止的条件就是i==j,
 	nums[j] = k;        //上面用k保留了nums[low]的值
+	//减一加一是因为独立出来上一次的基数
 	sqsort(nums, low, i - 1);
 	sqsort(nums, i + 1, high);
 }
