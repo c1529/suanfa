@@ -5,6 +5,13 @@ typedef struct {
 	int data[MaxSize];
 	int top;
 }SqStack;
+
+//定义链栈
+typedef struct Linknode{
+	int data;                //数据域
+	struct Linknoode* next;  //指针域
+}LiStack;
+
 //初始化栈
 void InitStack(SqStack &S)
 {
