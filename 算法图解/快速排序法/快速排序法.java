@@ -59,7 +59,7 @@ class sort{
         int n=nums.length;
         for(int i=0;i<n;i++)
         {
-            System.out.print(nums[i]+"  ");9
+            System.out.print(nums[i]+"  ");
         }
     }
 }
